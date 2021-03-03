@@ -19,6 +19,19 @@ $email_address))
     $errors .= "\n Error: Invalid email address";
 }
 
+// if isset input name all
+if(isset($_POST['submit']) || 
+    isset($_POST['email']) || 
+    isset($_POST['message']) ||
+    isset($_POST['name'])) {
+    
+        // what if true and then..
+        echo "<script>
+        alert('Submit Success!!, we send to your email : ".$email_address."');
+        window.location='".'contact-form-thank-you.html'."';
+        </script>";
+}  ?>
+
 
 <html>
 <head>
@@ -30,7 +43,6 @@ $email_address))
 <?php
 echo nl2br($errors);
 ?>
-
 
 </body>
 </html>
