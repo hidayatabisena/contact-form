@@ -58,31 +58,30 @@ label,a
 <!-- a helper script for vaidating the form-->
 <script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
 </head>	
-</head>
+
 
 <body>
 	<div class="container">
 
-	
-	<h1>Contact us</h1>
-	<form method="POST" name="contactform" action="contact-form-handler.php"> 
-		<div class="input-contact">
-			<label for='name'>Your Name:</label>
-			<input type="text" name="name">
-		</div>
-		<div class="input-contact">
-			<label for='email'>Email Address:</label>
-			<input type="text" name="email"> <br>
-		</div>
-		<div class="input-contact">
-			<label for='message'>Message:</label> 
-			<textarea name="message"></textarea>
-		</div>
-		
-			<input type="submit" name="submit" value="Submit" />
+		<h1>Contact us</h1>
+			<form method="POST" name="contactform" action="contact-form-handler.php"> 
+				<div class="input-contact">
+					<label for='name'>Your Name:</label>
+					<input type="text" name="name">
+				</div>
+				<div class="input-contact">
+					<label for='email'>Email Address:</label>
+					<input type="text" name="email"> <br>
+				</div>
+				<div class="input-contact">
+					<label for='message'>Message:</label> 
+					<textarea name="message"></textarea>
+				</div>
+				
+					<input type="submit" name="submit" value="Submit" />
+					
 			
-	
-	</form>
+			</form>
 	</div>
 
 <script language="JavaScript">
