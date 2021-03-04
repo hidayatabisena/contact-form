@@ -1,3 +1,12 @@
+<?php 
+// include session
+session_start();
+
+// Generate token for PHP 7 
+$_SESSION['token'] = bin2hex(random_bytes(32));
+// Expire token
+$_SESSION['expire_token'] = time() + 600; // 10 minute = 600 secs
+?>
 <html>
 <head>
 	<title>Contact us now</title>
@@ -66,6 +75,7 @@ label,a
 		<h1>Contact us</h1>
 			<form method="POST" name="contactform" action="contact-form-handler.php"> 
 				<div class="input-contact">
+					<input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>" />
 					<label for='name'>Your Name:</label>
 					<input type="text" name="name">
 				</div>
